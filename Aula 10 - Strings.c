@@ -2,7 +2,7 @@
 
 int main(){
 	
-	char nomes[3][2][20]; 
+	char nomes[3][2][20]; 	// Matriz de string
 	int i=0, j=0;
 	
 	for(i=0; i<3; i++){
@@ -13,6 +13,7 @@ int main(){
 	}
 	printf("\n\n");
 
+	// Imprimir matriz com posições
 	for(j=0; j<2; j++){
 		printf("\t%i\t", j);
 	}
