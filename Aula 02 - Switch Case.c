@@ -4,24 +4,24 @@
 #include <locale.h>
 
 // Entrada de dados: 11/06/1994
-// Saída de dados: 11 de Junho de 1994
+// SaÃ­da de dados: 11 de Junho de 1994
 
 int dia, mes, ano;
 char mesExtenso[20];
 
 int main(){
 	
-	// printf("\nEst%c", 160); // esse %c vai ser substituído pelo caracter correspondente (Tabela ASCII)
+	// printf("\nEst%c", 160); // esse %c vai ser substituÃ­do pelo caracter correspondente (Tabela ASCII)
 	//		OU
 	setlocale(LC_ALL, "Portuguese"); // Tem que importar biblioteca <locale.h>
-		// Válido para todos os printf abaixo
-		// Problema: separador de casas decimais é diferente em Português VS Inglês -> isso também altera
-	// printf("\nEstá começando mais uma aula");
+		// VÃ¡lido para todos os printf abaixo
+		// Problema: separador de casas decimais Ã© diferente em PortuguÃªs VS InglÃªs -> isso tambÃ©m altera
+	// printf("\nEstÃ¡ comeÃ§ando mais uma aula");
 	
 	system("color fc"); // Alterar cor do prompt de comando -> para ver possibilidades cores, escrever "color help" no DOS
 	
 	printf("\nEscreva a sua data de nascimento (Ex.: dd/mm/aaa): ");
-	scanf("%i/%d/%i", &dia, &mes, &ano); // %d (double) para conseguir ler 0 antes do mês (faz conversão de tipo de dado e ignora o 0 a esquerda)
+	scanf("%i/%d/%i", &dia, &mes, &ano); // %d (double) para conseguir ler 0 antes do mÃªs (faz conversÃ£o de tipo de dado e ignora o 0 a esquerda)
 		
 	// 		if (mes == 01){
 	// 			strcpy(mesExtenso, "Janeiro");
@@ -29,17 +29,17 @@ int main(){
 	//			strcpy(mesExtenso, "Fevereiro");
 	//		}
 	
-	// switch ... case -> Testar valores para mesma variável (se fizer com if...else vai ficar estrutura muito grande) -> simplificar
-	// Não funciona exatamente igual. 
-	// if...case testa um e, se condição é verdadeira, não executa o resto. 
-	// switch...case executa tudo a principio (por isso coloca "break" para parar execução se for o caso)
+	// switch ... case -> Testar valores para mesma variÃ¡vel (se fizer com if...else vai ficar estrutura muito grande) -> simplificar
+	// NÃ£o funciona exatamente igual. 
+	// if...case testa um e, se condiÃ§Ã£o Ã© verdadeira, nÃ£o executa o resto. 
+	// switch...case executa tudo a principio (por isso coloca "break" para parar execuÃ§Ã£o se for o caso)
 	
 	if (mes > 0 && mes <=12) {
 	
 	switch(mes) {
 		case 1:
 			strcpy(mesExtenso, "Janeiro");
-			// também poderia colocar -> printf("%i de Janeiro de %1", dia, ano); -> aí não utiliza string
+			// tambÃ©m poderia colocar -> printf("%i de Janeiro de %1", dia, ano); -> aÃ­ nÃ£o utiliza string
 			break;
 		case 2:
 			strcpy(mesExtenso, "Fevereiro");
@@ -57,33 +57,35 @@ int main(){
 			strcpy(mesExtenso, "Junho");
 			break;
 		case 7:
-       		strcpy(mesExtenso, "Julho");
-        	break;
-        case 8:
-        	strcpy(mesExtenso, "Agosto");
-        	break;
-        case 9:
-        	strcpy(mesExtenso, "Setembro");
-        	break;
-        case 10:
-        	strcpy(mesExtenso, "Outubro");
-	        break;
-        case 11:
-        	strcpy(mesExtenso, "Novembro");
-        	break;
-        case 12:
-        	strcpy(mesExtenso, "Dezembro");
-        	break;
-		// default:	(Nenhuma condição acima foi atendida)
-			// printf("Não foi possível identificar o mês.\n");
+       			strcpy(mesExtenso, "Julho");
+        		break;
+		case 8:
+        		strcpy(mesExtenso, "Agosto");
+        		break;
+		case 9:
+        		strcpy(mesExtenso, "Setembro");
+        		break;
+		case 10:
+        		strcpy(mesExtenso, "Outubro");
+	        	break;
+	        case 11:
+        		strcpy(mesExtenso, "Novembro");
+        		break;
+        	case 12:
+        		strcpy(mesExtenso, "Dezembro");
+        		break;
+		
+		// default:	(Nenhuma condiÃ§Ã£o acima foi atendida)
+			// printf("NÃ£o foi possÃ­vel identificar o mÃªs.\n");
 			// break;
+		
 		printf("%i de %s de %i", dia, mesExtenso, ano); // %s -> recebendo valor de STRING
 		}
-	}
-	else { printf("Não é uma data válida.");
+	} else { 
+		printf("NÃ£o Ã© uma data vÃ¡lida.");
 	}
 	
-		// system("cls"); 	// Apagar tela ou conteúdo. Todos os comandos do DOS são válidos -> criar pasta, mover arquivo, etc.
+		// system("cls"); 	// Apagar tela ou conteÃºdo. Todos os comandos do DOS sÃ£o vÃ¡lidos -> criar pasta, mover arquivo, etc.
 							// Para navegar entre pastas, tem que colocar \\ para ignorar uma das barras (se tornam uma)
 							// Ex: md C\\Stella -> criar pasta C, depois colocar esse comando para criar pasta Stella dentro da C
 	
