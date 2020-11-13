@@ -1,8 +1,7 @@
 #include <stdio.h>
-#include "BibliotecaViana.c"	// Ao importar biblioteca que n„o seja nativa do C,
-								// tem que colocar aspas duplas.
-int main (){					// Arquivo e biblioteca tem que ser salvos na mesma pasta
-	
+#include "BibliotecaViana.c"	// Ao importar biblioteca que n√£o seja nativa do C, tem que colocar aspas duplas.
+				// Arquivo e biblioteca tem que ser salvos na mesma pasta
+int main (){					
 	char nome[30];
 	int idade, cpf, i;
 	
@@ -12,11 +11,11 @@ int main (){					// Arquivo e biblioteca tem que ser salvos na mesma pasta
 	
 	printf("%c", 218);		// 218 = canto superior esquerdo
 	for(i=0; i<60; i++){
-		printf("%c", 196);	// 196 = traÁo horizontal
+		printf("%c", 196);	// 196 = tra√ßo horizontal
 	}
 	
 	printf("%c", 191);		// 191 = canto superior direito
-	printf("\n%c", 179);	// 179 = traÁo vertical
+	printf("\n%c", 179);		// 179 = tra√ßo vertical
 	gotoxy(2,62); printf("%c", 179);		
 	
 	printf("\n");
@@ -26,18 +25,18 @@ int main (){					// Arquivo e biblioteca tem que ser salvos na mesma pasta
 	}
 	printf("%c", 217); 		// 217 = canto direito inferior
 	
-	delay(3000);	// Pausa tela por 3s
+	delay(3000);			// Pausa tela por 3s. Tamb√©m √© poss√≠vel utilizar fun√ß√£o "sleep()"
 	
 	cor(1);
 	gotoxy(2,2);
 	printf("Nome: ");	
 	
-	gotoxy(2,8);	// Reposiciona cursor para ler nome
+	gotoxy(2,8);			// Reposiciona cursor para ler nome
 	scanf("%s", &nome);
 	printf("\n\n");
 	
 	/*
-	gotoxy(1,25);	// Posiciona na mesma linha. Cuidado pra n„o sobreescrever informaÁıes
+	gotoxy(1,25);			// Posiciona na mesma linha. Cuidado pra n√£o sobreescrever informa√ß√µes
 	printf("Idade: ");
 	gotoxy(1,40);
 	printf("CPF: ");
