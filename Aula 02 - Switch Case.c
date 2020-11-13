@@ -16,7 +16,6 @@ int main(){
 	setlocale(LC_ALL, "Portuguese"); // Tem que importar biblioteca <locale.h>
 		// Válido para todos os printf abaixo
 		// Problema: separador de casas decimais é diferente em Português VS Inglês -> isso também altera
-	// printf("\nEstá começando mais uma aula");
 	
 	system("color fc"); // Alterar cor do prompt de comando -> para ver possibilidades cores, escrever "color help" no DOS
 	
@@ -36,50 +35,50 @@ int main(){
 	
 	if (mes > 0 && mes <=12) {
 	
-	switch(mes) {
-		case 1:
-			strcpy(mesExtenso, "Janeiro");
-			// também poderia colocar -> printf("%i de Janeiro de %1", dia, ano); -> aí não utiliza string
-			break;
-		case 2:
-			strcpy(mesExtenso, "Fevereiro");
-			break;
-		case 3:
-			strcpy(mesExtenso, "Marco");
-			break;
-		case 4:
-			strcpy(mesExtenso, "Abril");
-			break;
-		case 5:
-			strcpy(mesExtenso, "Maio");
-			break;		
-		case 6:
-			strcpy(mesExtenso, "Junho");
-			break;
-		case 7:
-       			strcpy(mesExtenso, "Julho");
-        		break;
-		case 8:
-        		strcpy(mesExtenso, "Agosto");
-        		break;
-		case 9:
-        		strcpy(mesExtenso, "Setembro");
-        		break;
-		case 10:
-        		strcpy(mesExtenso, "Outubro");
-	        	break;
-	        case 11:
-        		strcpy(mesExtenso, "Novembro");
-        		break;
-        	case 12:
-        		strcpy(mesExtenso, "Dezembro");
-        		break;
-		
-		// default:	(Nenhuma condição acima foi atendida)
-			// printf("Não foi possível identificar o mês.\n");
-			// break;
-		
-		printf("%i de %s de %i", dia, mesExtenso, ano); // %s -> recebendo valor de STRING
+		switch(mes) {
+			case 1:
+				strcpy(mesExtenso, "Janeiro");
+				// também poderia colocar -> printf("%i de Janeiro de %1", dia, ano); -> aí não utiliza string
+				break;
+			case 2:
+				strcpy(mesExtenso, "Fevereiro");
+				break;
+			case 3:
+				strcpy(mesExtenso, "Marco");
+				break;
+			case 4:
+				strcpy(mesExtenso, "Abril");
+				break;
+			case 5:
+				strcpy(mesExtenso, "Maio");
+				break;		
+			case 6:
+				strcpy(mesExtenso, "Junho");
+				break;
+			case 7:
+				strcpy(mesExtenso, "Julho");
+				break;
+			case 8:
+				strcpy(mesExtenso, "Agosto");
+				break;
+			case 9:
+				strcpy(mesExtenso, "Setembro");
+				break;
+			case 10:
+				strcpy(mesExtenso, "Outubro");
+				break;
+			case 11:
+				strcpy(mesExtenso, "Novembro");
+				break;
+			case 12:
+				strcpy(mesExtenso, "Dezembro");
+				break;
+
+			// default:	(Nenhuma condição acima foi atendida)
+				// printf("Não foi possível identificar o mês.\n");
+				// break;
+
+			printf("%i de %s de %i", dia, mesExtenso, ano); // %s -> recebendo valor de STRING
 		}
 	} else { 
 		printf("Não é uma data válida.");
