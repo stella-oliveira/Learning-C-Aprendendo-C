@@ -1,13 +1,17 @@
 // float nota; 					Armazena somente UMA nota
 
+#include <stdio.h>
+
 float nota[4] = {0,0,0,0};		//	Armazena 4 notas
 
-nota[0] = 65.10;	//	Õndice do vetor (inicia em 0)
+nota[0] = 65.10;			//	√çndice do vetor (inicia em 0)
 nota[1] = 45.13;
 nota[2] = 77.80;
-nota[3] = 98.10;	//	A primeira posiÁ„o È 0, por isso vai atÈ o 3 (total 4)
-					//	Cada posiÁ„o È como se fosse uma vari·vel
+nota[3] = 98.10;			//	A primeira posi√ß√£o √© 0, por isso vai at√© o 3 (total 4)
+					//	Cada posi√ß√£o √© como se fosse uma vari√°vel
 
-for(i=0; i<4; i++){
-	scanf("%f", &nota[i]);
-}	
+int main(){
+	for(i=0; i<4; i++){
+		scanf("%f", &nota[i]);
+	}	
+}
